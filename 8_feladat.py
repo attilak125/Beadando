@@ -22,3 +22,4 @@ def kreses(a,b):
                             break
                     aindex+=1
                     bindex+=1
+                    
