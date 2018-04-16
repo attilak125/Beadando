@@ -69,4 +69,4 @@ def kereses(a,b):
                             maxegyezes = count
     print(maxegyezes)
     return 0
-kereses("csirke","csirke")
+kereses("csirke","A csirke")
