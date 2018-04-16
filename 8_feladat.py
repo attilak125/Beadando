@@ -68,5 +68,5 @@ def kereses(a,b):
                         if (maxegyezes < count):
                             maxegyezes = count
     print(maxegyezes)
-    return 0
+    return maxegyezes
 kereses("csirke","A csirke")
