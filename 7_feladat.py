@@ -55,4 +55,4 @@ def palindromic(a):
 
 
 
-palindromic("saS")
+palindromic("a gorog a")
