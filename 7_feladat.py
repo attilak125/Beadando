@@ -3,6 +3,8 @@ def palindromic(a):
     b=a.lower()
     normalstring=''
     reverstring=''
+    szamlalo=0
+    maximum=0
     for i in b:
         if 'a' <= i <= 'z':
             normalstring+=i
@@ -10,7 +12,17 @@ def palindromic(a):
         reverstring+=normalstring[i]
 
     for i in range(0,len(normalstring)):
-        
+        if normalstring[i] == reverstring[i]:
+            szamlalo+=1
+            print(szamlalo)
+        elif szamlalo > maximum:
+            maximum=szamlalo
+            szamlalo=0
+        else:
+            szamlalo=0
+    if szamlalo > maximum:
+        maximum=szamlalo
+    print(maximum)
 
 
     # seged=''
@@ -43,4 +55,4 @@ def palindromic(a):
 
 
 
-palindromic("saS feszke mAgasan van lol")
+palindromic("saS")
