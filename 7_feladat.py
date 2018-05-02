@@ -3,6 +3,8 @@ def palindromic(a):
     b=a.lower()
     normalstring=''
     reverstring=''
+    egyezes=''
+    maxegyezes=''
     szamlalo=0
     maximum=0
     for i in b:
@@ -13,15 +15,20 @@ def palindromic(a):
 
     for i in range(0,len(normalstring)):
         if normalstring[i] == reverstring[i]:
+            egyezes+=reverstring[i]
             szamlalo+=1
-            print(szamlalo)
         elif szamlalo > maximum:
+            maxegyezes=egyezes
             maximum=szamlalo
+            egyezes=''
             szamlalo=0
         else:
+            egyezes=''
             szamlalo=0
     if szamlalo > maximum:
+        maxegyezes=egyezes
         maximum=szamlalo
+    print(maxegyezes)
     print(maximum)
 
 
