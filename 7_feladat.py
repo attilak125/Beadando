@@ -73,4 +73,4 @@ def palindromic(a):
 
 
 
-palindromic(" almafakecske a gorog a banas")
+palindromic(" almafakecske a gorog a  banas")
