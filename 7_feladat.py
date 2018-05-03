@@ -18,41 +18,28 @@ def palindromic(a):
     for i in range(0,len(normalstring)):
         for j in range(egyezeshelye,len(reverstring)):
             if normalstring[i] == reverstring [j]:
-                print(normalstring[i],reverstring[j])
                 if i > j:
-                    print(1)
                     seged = i-j
                     segedindex=0
                     for index in range(i,len(reverstring)):
                         segedindex= index-seged
                         if normalstring[index] == reverstring[segedindex]:
                             egyezes+=normalstring[index]
+                            print(egyezes)
                             szamlalo+=1
-                        elif szamlalo > maximum:
-                            maxegyezes = egyezes
-                            maximum = szamlalo
-                            szamlalo=0
-                            egyezes=''
                         else:
-                            szamlalo=0
-                            egyezes=''
+                            break
                 else:
                     seged=j-i
                     segedindex=0
                     for index in range(j,len(reverstring)):
                         segedindex=index-seged
                         if normalstring[segedindex] == reverstring[index]:
-                            egyezes+=normalstring[index]
+                            egyezes+=normalstring[segedindex]
                             szamlalo+=1
-                        elif szamlalo > maximum:
-                            maxegyezes = egyezes
-                            maximum = szamlalo
-                            szamlalo=0
-                            egyezes=''
                         else:
-                            szamlalo=0
-                            egyezes=''
-            elif szamlalo > maximum:
+                            break
+            if szamlalo > maximum:
                 maxegyezes = egyezes
                 maximum = szamlalo
                 szamlalo = 0
@@ -73,4 +60,4 @@ def palindromic(a):
 
 
 
-palindromic(" almafakecske a gorog a  banas")
+palindromic("banana")
